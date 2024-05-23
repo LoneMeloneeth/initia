@@ -38,7 +38,7 @@ ifeq ($(LEDGER_ENABLED),true)
 		else
 			GCC = $(shell command -v gcc 2> /dev/null)
 			ifeq ($(GCC),)
-				$(error gcc not installed for ledger support, please install or set LEDGER_ENABLED=false)
+			$(error gcc not installed for ledger support, please install or set LEDGER_ENABLED=false)
 			else
 				build_tags += ledger
 			endif
